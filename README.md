@@ -1,11 +1,11 @@
-# README
+# Ruby on Rails University
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+----
 
-Things you may want to cover:
-
-* Ruby version
+### Ruby version: 2.5.1p57
+###  Rails version: 5.1.7
+###  JQuery:
+###  Materialize-Sass: 1.0.0
 
 * System dependencies
 
