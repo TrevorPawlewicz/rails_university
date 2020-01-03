@@ -1,24 +1,35 @@
 # Ruby on Rails University
 
-----
+* Ruby version: 2.5.1p57
+*  Rails version: 5.1.7
+*  JQuery:
+*  Materialize-Sass: 1.0.0
+  * require material_icons in application.css
 
-### Ruby version: 2.5.1p57
-###  Rails version: 5.1.7
-###  JQuery:
-###  Materialize-Sass: 1.0.0
+---
+**To communicate with the Database, there needs to be a corresponding Model.**
 
-* System dependencies
+model ex: _app/models/course.rb_
 
-* Configuration
+create migration file for the Courses and Students tables in the CLI:
+- `rails generate migration create_courses`
+- `rails generate migration create_students`
 
-* Database creation
+_migration example_: db/migrate/20200103154421_create_courses.rb
 
-* Database initialization
+```ruby
+class CreateCourses < ActiveRecord::Migration[5.1]
+  def change
+    create_table :courses do |t|
+      t.string :short_name
+      t.string :name
+      t.text :description
+      t.timestamps
+    end
+  end
+end
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+after files are populated with the proper fields, migrate:
+- `rails db:migrate`
+- creates a __schema.rb__ file
