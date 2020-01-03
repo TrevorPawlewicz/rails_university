@@ -45,3 +45,13 @@ after files are populated with the proper fields, migrate:
 - creates a __schema.rb__ file
 
 `reload!` rails console to reflect changes made to the models
+
+---
+##### Remove Rails field_with_errors wrapper!!!
+add this block to your `config/environment.rb`:
+
+```ruby
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+  html_tag.html_safe
+end
+```

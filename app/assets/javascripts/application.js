@@ -21,4 +21,6 @@ $(document).on('turbolinks:load', function() {
     $(".dropdown-trigger").dropdown();
     // materialize sidenav:
     $('.sidenav').sidenav();
+    // fade out the flash message with JS
+    $('#fade-out-target').delay(5000).fadeOut(4000);
 });
