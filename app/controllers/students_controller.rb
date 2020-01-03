@@ -4,5 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def new
+    # initialize a new student object in a variable
+    @student = Student.new
   end
 end

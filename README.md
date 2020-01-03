@@ -1,9 +1,19 @@
 # Ruby on Rails University
 
+| Dependency      | Version   | Links  |
+| --------------- |:---------:| ------:|
+| Ruby            | 2.5.1p57  | https://www.ruby-lang.org/en/ |
+| Rails           | 5.1.7     | https://rubyonrails.org/ |
+| jQuery          | ???       | https://jquery.com/ |
+| Materialize CSS | 1.0.0     | https://materializecss.com/ |
+| Materialize-Sass| 1.0.0     | https://github.com/mkhairi/materialize-sass |
+
 * Ruby version: 2.5.1p57
 *  Rails version: 5.1.7
 *  JQuery:
 *  Materialize-Sass: 1.0.0
+https://materializecss.com/
+https://github.com/mkhairi/materialize-sass
   * require material_icons in `application.css`
 
 ---
