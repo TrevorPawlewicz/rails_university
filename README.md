@@ -8,18 +8,12 @@
 | Materialize CSS | 1.0.0     | https://materializecss.com/ |
 | Materialize-Sass| 1.0.0     | https://github.com/mkhairi/materialize-sass |
 
-* Ruby version: 2.5.1p57
-*  Rails version: 5.1.7
-*  JQuery:
-*  Materialize-Sass: 1.0.0
-https://materializecss.com/
-https://github.com/mkhairi/materialize-sass
   * require material_icons in `application.css`
 
 ---
 **To communicate with the Database, there needs to be a corresponding Model.**
 
-model ex: _app/models/course.rb_
+model ex: _**app/models/course.rb**_
 
 create migration file for the Courses and Students tables in the CLI:
 - `rails generate migration create_courses`
@@ -47,8 +41,8 @@ after files are populated with the proper fields, migrate:
 `reload!` rails console to reflect changes made to the models
 
 ---
-##### Remove Rails field_with_errors wrapper!!!
-add this block to your `config/environment.rb`:
+### Remove Rails field_with_errors wrapper!!!
+add this block to your __`config/environment.rb`__:
 
 ```ruby
 ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
