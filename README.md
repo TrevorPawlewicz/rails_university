@@ -4,7 +4,7 @@
 *  Rails version: 5.1.7
 *  JQuery:
 *  Materialize-Sass: 1.0.0
-  * require material_icons in application.css
+  * require material_icons in `application.css`
 
 ---
 **To communicate with the Database, there needs to be a corresponding Model.**
@@ -33,3 +33,5 @@ end
 after files are populated with the proper fields, migrate:
 - `rails db:migrate`
 - creates a __schema.rb__ file
+
+`reload!` rails console to reflect changes made to the models
