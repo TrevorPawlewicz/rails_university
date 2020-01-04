@@ -1,10 +1,12 @@
 class StudentsController < ApplicationController
+  before_action :set_student, only: [:show, :edit, :update]
+
   def index
     @students = Student.all
   end
 
   def show
-    @student = Student.find(params[:id])
+    # before_action :set_student will run here :)
   end
 
   def new
@@ -17,19 +19,19 @@ class StudentsController < ApplicationController
     puts "--------------------------create: #{@student}"
     if @student.save
       flash[:notice] = "You have successfully signed up!"
-      redirect_to(root_path)
+      redirect_to student_path(@student)
     else
       render 'new'
     end
   end
 
   def edit
-    @student = Student.find(params[:id])
+    # before_action :set_student will run here :)
     puts "-------------------- @student = #{@student}"
   end
 
   def update
-    @student = Student.find(params[:id])
+    # before_action :set_student will run here :)
     if @student.update(student_paramz)
       flash[:notice] = "You have successfully updated your profile!"
       redirect_to student_path(@student)
@@ -39,6 +41,10 @@ class StudentsController < ApplicationController
   end
 
   private
+
+  def set_student
+    @student = Student.find(params[:id])
+  end
 
   # whitelist first in Rail 4+
   def student_paramz
