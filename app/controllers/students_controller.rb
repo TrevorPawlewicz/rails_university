@@ -3,6 +3,10 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
+  def show
+    @student = Student.find(params[:id])
+  end
+
   def new
     # initialize a new student object in a variable
     @student = Student.new
