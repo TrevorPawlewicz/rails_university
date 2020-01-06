@@ -16,7 +16,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_paramz)
-    puts "--------------------------create: #{@student}"
+    puts "--------------------------create: #{@student.name}"
     if @student.save
       flash[:notice] = "You have successfully signed up!"
       redirect_to student_path(@student)
@@ -27,7 +27,7 @@ class StudentsController < ApplicationController
 
   def edit
     # before_action :set_student will run here :)
-    puts "-------------------- @student = #{@student}"
+    puts "-------------------- @student = #{@student.name}"
   end
 
   def update
@@ -46,8 +46,8 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  # whitelist first in Rail 4+
+  # whitelist first (what params can be accepted) in Rail 4+
   def student_paramz
-    params.require(:student).permit(:name, :email)
+    params.require(:student).permit(:name, :email, :password, :password_confirmation)
   end
 end
