@@ -29,7 +29,7 @@
           <ul id="nav-mobile" class="left hide-on-med-and-down">
               <li><%= link_to "Courses", root_path %></li>
               <% if logged_in? %>
-                <li><%= link_to "Students", student_path %></li>
+                <li><%= link_to "Students", students_path %></li>
               <% end  %>
               <!-- Dropdown Trigger -->
               <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -42,7 +42,7 @@
   <ul class="sidenav" id="mobile-demo">
     <li><%= link_to "Courses", root_path %></li>
     <% if logged_in? %>
-      <li><%= link_to "Students", student_path %></li>
+      <li><%= link_to "Students", students_path %></li>
     <% end  %>
     <li><a href="#">Enrollment</a></li>
     <!-- Dropdown Trigger -->
